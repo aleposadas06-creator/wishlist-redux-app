@@ -1,0 +1,35 @@
+.form-group {
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2a5298;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+}
+
+button {
+  background: #2a5298;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #1e3c72;
+  transform: translateY(-2px);
+}

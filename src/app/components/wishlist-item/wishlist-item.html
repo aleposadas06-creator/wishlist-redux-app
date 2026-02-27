@@ -1,0 +1,22 @@
+<div class="item-card">
+  <div class="item-title">{{ item.name }}</div>
+  <div class="item-description">{{ item.description }}</div>
+
+   <div class="score">
+    ⭐ Prioridad: {{ item.upvotes - item.downvotes }}
+  </div>
+
+  <div class="actions">
+    <button class="vote-btn upvote" (click)="upvote()">
+      👍 {{ item.upvotes }}
+    </button>
+
+    <button class="vote-btn downvote" (click)="downvote()">
+      👎 {{ item.downvotes }}
+    </button>
+
+    <button class="delete-btn" (click)="delete()">
+      Eliminar
+    </button>
+  </div>
+</div>
