@@ -10,16 +10,16 @@ import { wishlistReducer } from './store/wishlist.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-  provideRouter(routes),
+    provideRouter(routes),
 
-  provideStore({
-    wishlist: wishlistReducer
-  }),
+    provideStore({
+      wishlist: wishlistReducer
+    }),
 
-  provideEffects([]),
+    provideEffects([]),
 
-  provideStoreDevtools({
-    maxAge: 25,
-  })
-]
+    provideStoreDevtools({
+      maxAge: 25,
+    })
+  ]
 };

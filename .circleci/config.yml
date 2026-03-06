@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:20.10
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: npm install --legacy-peer-deps
+
+      - run:
+          name: Run unit tests
+          command: npm run test -- --watch=false --browsers=ChromeHeadless
+
+workflows:
+  build_and_test:
+    jobs:
+      - build

@@ -17,6 +17,21 @@
       </app-wishlist-item>
     </div>
 
-  </div>
+    <hr>
 
+    <h2>Mapa de destinos</h2>
+
+    <app-mapa></app-mapa>
+
+    <hr>
+
+    <div class="tracking-panel">
+      <h3>Tracking de clicks</h3>
+
+      <p>👍 Upvote clicks: {{ (tracking$ | async)?.upvote }}</p>
+      <p>👎 Downvote clicks: {{ (tracking$ | async)?.downvote }}</p>
+      <p>🗑 Delete clicks: {{ (tracking$ | async)?.delete }}</p>
+    </div>
+
+  </div>
 </div>

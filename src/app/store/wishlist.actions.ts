@@ -19,3 +19,8 @@ export const downvoteItem = createAction(
   '[Wishlist] Downvote Item',
   props<{ id: number }>()
 );
+
+export const trackClick = createAction(
+  '[Tracking] Track Click',
+  props<{ tag: string }>()
+);

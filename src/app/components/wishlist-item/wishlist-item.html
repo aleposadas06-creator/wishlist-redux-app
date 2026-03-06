@@ -2,21 +2,38 @@
   <div class="item-title">{{ item.name }}</div>
   <div class="item-description">{{ item.description }}</div>
 
-   <div class="score">
+  <div class="score">
     ⭐ Prioridad: {{ item.upvotes - item.downvotes }}
   </div>
 
   <div class="actions">
-    <button class="vote-btn upvote" (click)="upvote()">
+
+    <button
+      class="vote-btn upvote"
+      (click)="upvote()"
+      appTracking
+      data-tracking-tags="wishlist upvote"
+    >
       👍 {{ item.upvotes }}
     </button>
 
-    <button class="vote-btn downvote" (click)="downvote()">
+    <button
+      class="vote-btn downvote"
+      (click)="downvote()"
+      appTracking
+      data-tracking-tags="wishlist downvote"
+    >
       👎 {{ item.downvotes }}
     </button>
 
-    <button class="delete-btn" (click)="delete()">
+    <button
+      class="delete-btn"
+      (click)="delete()"
+      appTracking
+      data-tracking-tags="wishlist delete"
+    >
       Eliminar
     </button>
+
   </div>
 </div>
